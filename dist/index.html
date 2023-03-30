@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="/index.c92073ef.css">
     <script src="/index.62406edb.js"></script>
@@ -45,19 +45,30 @@
       </div>
 
       <div class="container-box">
-        <section class="form-section">
-          <p class="login-text">login</p>
-          <form class="from">
-            <div class="email-box">
-              <label for="email" class="email-label">email</label>
-              <input type="text" class="email-input input--helper">
-            </div>
-            <div class="password-box">
-              <label for="password" class="password-label">password</label>
-              <input type="text" class="password-input input--helper">
-            </div>
-            <button class="login-btn">login</button>
-          </form>
+        <section class="form-section hidden">
+          <div class="form-box">
+            <p class="login-text">login</p>
+            <form class="from">
+              <div class="email-box">
+                <label for="email" class="email-label">email</label>
+                <input type="text" class="email-input input--helper">
+              </div>
+              <div class="password-box">
+                <label for="password" class="password-label">password</label>
+                <input type="password" class="password-input input--helper">
+              </div>
+              <div class="remember-me-forgot-password-box">
+                <div class="remember-me-box">
+                  <input type="checkbox" class="remember-me-checkbox-input">
+                  <label for="remember-me" class="remember-me-label">remember me</label>
+                </div>
+                <div class="forgot-password-box">
+                  <a href="#" class="forgot-password-link">forgot password?</a>
+                </div>
+              </div>
+              <button class="login-btn">login</button>
+            </form>
+          </div>
         </section>
       </div>
     </div>
