@@ -1,0 +1,106 @@
+:root {
+  --primary-text: #fff;
+  --secondary-text: #444;
+  --register-link: rgb(107, 227, 107);
+  --register-hover: rgb(70, 227, 70);
+}
+
+/* RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 10px;
+  line-height: 1;
+  letter-spacing: 1px;
+}
+
+a,
+button,
+li {
+  list-style: none;
+  border: none;
+  text-decoration: none;
+}
+
+/* BODY */
+body {
+  background-image: url(/src/img/nature.jpeg);
+  background-size: cover;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.043);
+  height: 100vh;
+}
+
+/* NAV */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 110rem;
+  margin: 0 auto;
+  padding: 7.5rem 2rem;
+}
+
+.logo {
+  font-size: 2.7rem;
+  font-weight: 600;
+  color: var(--primary-text);
+  text-transform: uppercase;
+}
+
+.nav-links {
+  display: flex;
+}
+
+.nav-link {
+  color: var(--primary-text);
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin: 0 1.5rem;
+  padding-bottom: 0.6rem;
+  text-transform: uppercase;
+  transition: 0.2s;
+}
+
+.nav--link-helper:hover {
+  border-bottom: 3px solid var(--primary-text);
+}
+
+.login,
+.register {
+  font-weight: 600;
+  border: 1px solid var(--primary-text);
+  padding: 0.7rem 1.5rem;
+  transition: 0.2s;
+}
+
+.login {
+  margin-right: 20px;
+  margin-left: 1.5rem;
+}
+
+.login:hover {
+  color: var(--register-link);
+  border-color: var(--register-link);
+}
+
+.register {
+  color: var(--secondary-text);
+  background-color: var(--register-link);
+  margin: 0;
+}
+
+.register:hover {
+  color: var(--primary-text);
+  border-color: var(--register-hover);
+  background-color: var(--register-hover);
+}
