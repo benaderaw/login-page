@@ -3,7 +3,7 @@
   --secondary-text: #222;
   --register-link: rgb(107, 227, 107);
   --register-hover: rgb(70, 227, 70);
-  --form-box: #ffffff1c;
+  --form-box: #ffffff0e;
   --form-box-border: #ffffff44;
 }
 
@@ -215,7 +215,7 @@ body {
 
 /* --HIDE-- */
 
-.hidden {
+.idden {
   display: none;
 }
 

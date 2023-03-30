@@ -3,7 +3,7 @@
   --secondary-text: #222;
   --register-link: #6be36b;
   --register-hover: #46e346;
-  --form-box: #ffffff1c;
+  --form-box: #ffffff0e;
   --form-box-border: #fff4;
 }
 
@@ -201,7 +201,7 @@ body {
   font-weight: 600;
 }
 
-.hidden {
+.idden {
   display: none;
 }
 
