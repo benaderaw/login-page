@@ -1,0 +1,18 @@
+{
+  "name": "login-page",
+  "version": "1.0.0",
+  "description": "simple login page",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel index.html"
+  },
+  "author": "Biniam Aderaw",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.8.3"
+  },
+  "dependencies": {
+    "core-js": "^3.29.1"
+  }
+}
