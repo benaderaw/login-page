@@ -1,6 +1,6 @@
 :root {
   --primary-text: #fff;
-  --secondary-text: #222;
+  --secondary-text: #333;
   --register-link: #6be36b;
   --register-hover: #46e346;
   --form-box: #ffffff0e;
@@ -117,12 +117,33 @@ body {
 .form-box {
   background-color: var(--form-box);
   width: 35rem;
-  height: 43rem;
+  height: 42rem;
   border: 1.5px solid var(--form-box-border);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border-radius: 2rem;
   padding: 5rem;
+  position: relative;
+}
+
+.exit {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+}
+
+.exit-btn {
+  cursor: pointer;
+  text-transform: uppercase;
+  width: 1rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  color: var(--primary-text);
+  background-color: var(--form-box);
+  border: .5px solid var(--form-box-border);
+  border-radius: 50%;
+  font-size: 2rem;
+  font-weight: 300;
 }
 
 .login-text {
@@ -144,6 +165,7 @@ body {
   text-transform: capitalize;
   margin-bottom: 3rem;
   font-size: 1.4rem;
+  font-weight: 300;
 }
 
 .email-input, .password-input {
@@ -188,20 +210,32 @@ body {
   color: var(--primary-text);
   text-transform: capitalize;
   font-size: 1.1rem;
+  font-weight: 300;
+  transition: all .2s;
+}
+
+.forgot-password-link:hover {
+  color: var(--register-link);
 }
 
 .login-btn {
+  color: var(--secondary-text);
   cursor: pointer;
   width: 100%;
   background-color: var(--register-hover);
   text-transform: capitalize;
   border-radius: 0 1rem;
-  padding: .8rem;
+  padding: 1rem;
   font-size: 1.7rem;
   font-weight: 600;
+  transition: all .2s;
 }
 
-.idden {
+.login-btn:hover {
+  color: var(--primary-text);
+}
+
+.hidden {
   display: none;
 }
 

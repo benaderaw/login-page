@@ -9,10 +9,10 @@
   },
   "author": "Biniam Aderaw",
   "license": "ISC",
-  "devDependencies": {
-    "parcel": "^2.8.3"
-  },
   "dependencies": {
     "core-js": "^3.29.1"
+  },
+  "devDependencies": {
+    "parcel": "^2.8.3"
   }
 }

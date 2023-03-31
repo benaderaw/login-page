@@ -1,6 +1,6 @@
 :root {
   --primary-text: #fff;
-  --secondary-text: #222;
+  --secondary-text: #333;
   --register-link: rgb(107, 227, 107);
   --register-hover: rgb(70, 227, 70);
   --form-box: #ffffff0e;
@@ -124,13 +124,33 @@ body {
 }
 
 .form-box {
+  position: relative;
   background-color: var(--form-box);
   width: 35rem;
-  height: 43rem;
+  height: 42rem;
   border: 1.5px solid var(--form-box-border);
   border-radius: 2rem;
   padding: 5rem;
   backdrop-filter: blur(10px);
+}
+
+.exit {
+  position: absolute;
+  top: 4;
+  right: 4;
+}
+.exit-btn {
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  width: 1rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  color: var(--primary-text);
+  background-color: var(--form-box);
+  border: 0.5px solid var(--form-box-border);
 }
 
 .login-text {
@@ -151,6 +171,7 @@ body {
 .password-label {
   color: var(--primary-text);
   font-size: 1.4rem;
+  font-weight: 300;
   text-transform: capitalize;
   margin-bottom: 3rem;
 }
@@ -198,24 +219,36 @@ body {
 .remember-me-label,
 .forgot-password-link {
   font-size: 1.1rem;
+  font-weight: 300;
   color: var(--primary-text);
   text-transform: capitalize;
+  transition: 0.2s;
+}
+
+.forgot-password-link:hover {
+  color: var(--register-link);
 }
 
 .login-btn {
+  color: var(--secondary-text);
   cursor: pointer;
   font-size: 1.7rem;
   font-weight: 600;
-  padding: 0.8rem;
+  padding: 1rem;
   width: 100%;
   border-radius: 0 1rem;
   background-color: var(--register-hover);
   text-transform: capitalize;
+  transition: 0.2s;
+}
+
+.login-btn:hover {
+  color: var(--primary-text);
 }
 
 /* --HIDE-- */
 
-.idden {
+.hidden {
   display: none;
 }
 
