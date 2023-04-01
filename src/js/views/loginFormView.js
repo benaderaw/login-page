@@ -36,28 +36,27 @@ class LoginFormView extends View {
     const email = this._emailInput.value.trim().toLowerCase();
     const checkServicer = email.split("@");
 
-    if (!email.includes("@")) this.failedAlert();
+    if (!email.includes("@") || !email.includes(".")) this.failedAlert();
 
-    if (email.includes("@")) {
+    if (email.includes("@") && email.includes(".")) {
       const howManAt = email.split("").filter((el) => el === "@");
 
       const howManyDot = email.split("").filter((el) => el === ".");
 
-      if (howManAt.length > 1 || howManyDot.length > 1) this.failedAlert();
+      if (howManAt.length > 1 || howManyDot.length > 1) {
+        this.failedAlert();
+        return;
+      }
 
       if (howManAt.length === 1) {
-        console.log(666);
         if (
           (checkServicer[1] !== "gmail.com") &
           (checkServicer[1] !== "yahoo.com")
-        )
+        ) {
           return this.failedAlert();
-
-        if (
-          checkServicer[1] === "gmail.com" ||
-          checkServicer[1] === "yahoo.com"
-        )
+        } else {
           return this.checkPassword();
+        }
       }
     }
   }
