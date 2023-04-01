@@ -1,4 +1,4 @@
-export const API_KEY = "92ae4aab8532465396fe566324538821";
+export const API_KEY = "at_2Zot2dIsuo5ia34oKSfW4y4AVkaqd";
 
 export const NUMBER_CODE_START = 48;
 export const NUMBER_CODE_END = 57;

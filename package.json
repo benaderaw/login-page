@@ -10,7 +10,8 @@
   "author": "Biniam Aderaw",
   "license": "ISC",
   "dependencies": {
-    "core-js": "^3.29.1"
+    "core-js": "^3.29.1",
+    "regenerator-runtime": "^0.13.11"
   },
   "devDependencies": {
     "parcel": "^2.8.3"
