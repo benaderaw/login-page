@@ -19,7 +19,11 @@ class LoginFormView extends View {
     alert("Please check your email or password.");
   }
 
-  checkEmail() {
+  emailInput() {
+    const email = this._emailInput.value;
+
+    if (email.trim() === "") this.failedAlert();
+
     return this._emailInput.value;
   }
 

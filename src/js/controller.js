@@ -5,7 +5,7 @@ import loginView from "./views/loginView";
 
 const ValidationController = async function () {
   try {
-    const email = loginFormView.checkEmail(); // get email input value
+    const email = loginFormView.emailInput(); // get email input value
     await model.loadEmail(email); // load email validation data
 
     const emailStatus = model.state.email;
