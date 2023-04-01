@@ -3,7 +3,7 @@
   --secondary-text: #333;
   --register-link: rgb(107, 227, 107);
   --register-hover: rgb(70, 227, 70);
-  --form-box: #ffffff0e;
+  --form-box: #ffffff2f;
   --form-box-border: #ffffff44;
 }
 
@@ -150,7 +150,7 @@ body {
   border-radius: 50%;
   color: var(--primary-text);
   background-color: var(--form-box);
-  border: 0.5px solid var(--form-box-border);
+  border: 1.5px solid var(--form-box-border);
   transition: 0.2s;
 }
 

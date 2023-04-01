@@ -11,14 +11,24 @@ import { View } from "./view";
 class LoginFormView extends View {
   _password;
 
-  alert() {
+  successAlert() {
+    alert("You are logged in!");
+    this.resetInput();
+  }
+
+  resetInput() {
+    this._emailInput.value = "";
+    this._passwordInput.value = "";
+  }
+
+  failedAlert() {
     alert("Please check your email or password.");
   }
 
   validateLogin() {
     this._emailInput.value.trim() === "" ||
     this._passwordInput.value.trim() === ""
-      ? this.alert()
+      ? this.failedAlert()
       : this.checkEmail();
   }
 
@@ -26,14 +36,14 @@ class LoginFormView extends View {
     const email = this._emailInput.value.trim().toLowerCase();
     const checkServicer = email.split("@");
 
-    if (!email.includes("@")) this.alert();
+    if (!email.includes("@")) this.failedAlert();
 
     if (email.includes("@")) {
       const howManAt = email.split("").filter((el) => el === "@");
 
       const howManyDot = email.split("").filter((el) => el === ".");
 
-      if (howManAt.length > 1 || howManyDot.length > 1) this.alert();
+      if (howManAt.length > 1 || howManyDot.length > 1) this.failedAlert();
 
       if (howManAt.length === 1) {
         console.log(666);
@@ -41,7 +51,7 @@ class LoginFormView extends View {
           (checkServicer[1] !== "gmail.com") &
           (checkServicer[1] !== "yahoo.com")
         )
-          return this.alert();
+          return this.failedAlert();
 
         if (
           checkServicer[1] === "gmail.com" ||
@@ -56,15 +66,15 @@ class LoginFormView extends View {
     this._password = this._passwordInput.value.split("");
 
     // check if password has a space
-    if (this._password.includes(" ")) this.alert();
+    if (this._password.includes(" ")) this.failedAlert();
 
     // check if password has an uppercase
     this.checkPasswordLength() &
     this.checkPasswordUppercase() &
     this.checkPasswordLowercase() &
     this.checkPasswordNumber()
-      ? console.log("You are logged in")
-      : console.log("Failed to login");
+      ? this.successAlert()
+      : this.failedAlert();
   }
 
   // CHECK HELPER FUNCTION

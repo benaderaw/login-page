@@ -3,7 +3,7 @@
   --secondary-text: #333;
   --register-link: #6be36b;
   --register-hover: #46e346;
-  --form-box: #ffffff0e;
+  --form-box: #ffffff2f;
   --form-box-border: #fff4;
 }
 
@@ -140,7 +140,7 @@ body {
   height: 3.5rem;
   color: var(--primary-text);
   background-color: var(--form-box);
-  border: .5px solid var(--form-box-border);
+  border: 1.5px solid var(--form-box-border);
   border-radius: 50%;
   font-size: 2rem;
   font-weight: 300;
