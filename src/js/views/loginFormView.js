@@ -1,11 +1,3 @@
-import {
-  LOWERCASE_CODE_END,
-  LOWERCASE_CODE_START,
-  NUMBER_CODE_END,
-  NUMBER_CODE_START,
-  UPPERCASE_CODE_END,
-  UPPERCASE_CODE_START,
-} from "../config";
 import { View } from "./view";
 
 class LoginFormView extends View {
@@ -31,7 +23,7 @@ class LoginFormView extends View {
   // CHECK IF EMAIL IS FROM FREE PROVIDER SUCH AS GOOGLE OR YAHOO
   // CHECK IF FORMAT IS CORRECT
   validateLogin(isValidFormat, isFreeEmail) {
-    isValidFormat && isFreeEmail ? this.successAlert() : this.failedAlert();
+    isValidFormat && isFreeEmail ? this.checkPassword() : this.failedAlert();
   }
 
   //////// --- PASSWORD VALIDATION --- ////////

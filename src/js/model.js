@@ -1,4 +1,5 @@
-import { API_KEY } from "./config";
+import { API_KEY, API_URL } from "./config";
+import { AJAX } from "./helper";
 
 export const state = {
   email: {},
@@ -6,14 +7,11 @@ export const state = {
 
 export const loadEmail = async function (emailInput) {
   try {
-    //
-    const res = await fetch(
-      `https://emailverification.whoisxmlapi.com/api/v2?apiKey=${API_KEY}&emailAddress=${emailInput}`
+    const data = await AJAX(
+      `${API_URL}apiKey=${API_KEY}&emailAddress=${emailInput}`
     );
 
-    if (!res.ok) throw new Error("🛑🛑🛑 ERROR 🛑🛑🛑");
-
-    const data = await res.json();
+    console.log(data.freeCheck);
 
     state.email = {
       isFreeEmail: data.formatCheck === "true" ? true : false,
