@@ -19,6 +19,7 @@ class LoginFormView extends View {
     alert("Please check your email or password.");
   }
 
+  // CHECK EMAIL INPUT
   emailInput() {
     const email = this._emailInput.value;
 
@@ -27,8 +28,21 @@ class LoginFormView extends View {
     return this._emailInput.value;
   }
 
+  // CHECK IF EMAIL IS FROM FREE PROVIDER SUCH AS GOOGLE OR YAHOO
+  // CHECK IF FORMAT IS CORRECT
   validateLogin(isValidFormat, isFreeEmail) {
     isValidFormat && isFreeEmail ? this.successAlert() : this.failedAlert();
+  }
+
+  //////// --- PASSWORD VALIDATION --- ////////
+
+  checkPassword() {
+    const password = this._passwordInput.value;
+
+    const passw = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
+
+    if (!password.match(passw) || password.trim() === "") this.failedAlert();
+    if (password.match(passw)) this.successAlert();
   }
 
   // RESET
@@ -58,29 +72,3 @@ class LoginFormView extends View {
 }
 
 export default new LoginFormView();
-
-// const checkServicer = email.split("@");
-
-//     if (!email.includes("@") || !email.includes(".")) this.failedAlert();
-
-//     if (email.includes("@") && email.includes(".")) {
-//       const howManAt = email.split("").filter((el) => el === "@");
-
-//       const howManyDot = email.split("").filter((el) => el === ".");
-
-//       if (howManAt.length > 1 || howManyDot.length > 1) {
-//         this.failedAlert();
-//         return;
-//       }
-
-//       if (howManAt.length === 1) {
-//         if (
-//           (checkServicer[1] !== "gmail.com") &
-//           (checkServicer[1] !== "yahoo.com")
-//         ) {
-//           return this.failedAlert();
-//         } else {
-//           return this.checkPassword();
-//         }
-//       }
-//     }
