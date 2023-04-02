@@ -43,6 +43,11 @@ class LoginFormView extends View {
     this._passwordInput.value = "";
   }
 
+  closeForm() {
+    this._containerBox.classList.remove("active");
+    this.resetInput();
+  }
+
   // EVENT HANDLER
   loginFormHandler(handler) {
     this._formBox.addEventListener(
@@ -53,7 +58,7 @@ class LoginFormView extends View {
         const exitBtn = e.target.closest(".exit-btn");
         const loginBtn = e.target.closest(".login-btn");
 
-        if (exitBtn) this._containerBox.classList.remove("active");
+        if (exitBtn) this.closeForm();
 
         if (loginBtn) {
           handler();

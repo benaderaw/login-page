@@ -147,18 +147,18 @@ body {
   width: 1rem;
   width: 3.5rem;
   height: 3.5rem;
-  color: var(--primary-text);
+  color: var(--form-box-border);
   background-color: var(--form-box);
   border: 1.5px solid var(--form-box-border);
   border-radius: 50%;
   font-size: 2rem;
-  font-weight: 300;
+  font-weight: 600;
   transition: all .2s;
 }
 
 .exit-btn:hover {
   color: var(--register-hover);
-  border: .5px solid var(--register-hover);
+  border: 1.5px solid var(--register-hover);
 }
 
 .login-text {
@@ -173,6 +173,11 @@ body {
 
 .email-box {
   margin-bottom: 3rem;
+  position: relative;
+}
+
+.password-box {
+  position: relative;
 }
 
 .email-label, .password-label {
@@ -192,9 +197,17 @@ body {
   border-bottom: 2px solid var(--primary-text);
   background: none;
   margin-top: .7rem;
-  padding: 1.5rem 0;
+  padding: 1.5rem 3rem 1.5rem 0;
   font-size: 1.4rem;
-  display: block;
+  display: inline-block;
+}
+
+.mail-icon, .key-icon {
+  color: var(--primary-text);
+  font-size: 1.8rem;
+  position: absolute;
+  top: 26px;
+  right: 2px;
 }
 
 .email-input:focus, .password-input:focus {

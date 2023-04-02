@@ -6,6 +6,10 @@ export class View {
   _formSection = document.querySelector(".form-section");
   _formBox = document.querySelector(".form-box");
 
+  // Icons
+  _mailIcon = document.querySelector(".mail-icon");
+  _keyIcon = document.querySelector(".key-icon");
+
   _emailInput = document.querySelector(".email-input");
   _passwordInput = document.querySelector(".password-input");
   _exitBtn = document.querySelector(".exit-btn");
