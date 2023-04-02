@@ -53,7 +53,7 @@ class LoginFormView extends View {
         const exitBtn = e.target.closest(".exit-btn");
         const loginBtn = e.target.closest(".login-btn");
 
-        if (exitBtn) this._formSection.classList.add("hidden");
+        if (exitBtn) this._containerBox.classList.remove("active");
 
         if (loginBtn) {
           handler();

@@ -2,6 +2,7 @@ export class View {
   _loginLink = document.querySelector(".login");
   _registerLink = document.querySelector(".register");
 
+  _containerBox = document.querySelector(".container-box");
   _formSection = document.querySelector(".form-section");
   _formBox = document.querySelector(".form-box");
 

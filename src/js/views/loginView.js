@@ -2,7 +2,8 @@ import { View } from "./view";
 
 class LoginView extends View {
   removeHidden() {
-    this._formSection.classList.remove("hidden");
+    //this._formSection.classList.remove("hidden");
+    this._containerBox.classList.add("active");
   }
 
   loginHandler() {

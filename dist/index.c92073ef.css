@@ -126,6 +126,15 @@ body {
   position: relative;
 }
 
+.container-box {
+  transition: transform .5s, height .2s;
+  transform: scale(0);
+}
+
+.active {
+  transform: scale(1);
+}
+
 .exit {
   position: absolute;
   top: 4px;
